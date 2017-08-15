@@ -5,9 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/SizeClasses.svg?style=flat)](http://cocoapods.org/pods/SizeClasses)
 [![Platform](https://img.shields.io/cocoapods/p/SizeClasses.svg?style=flat)](http://cocoapods.org/pods/SizeClasses)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+SizeClasses lets you adapt your programmatic layout to size class changes - use the good parts of storyboards while writing code!
 
 ## Installation
 
@@ -17,6 +15,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "SizeClasses"
 ```
+
+## Example
+
+To run the example project, run `pod try SizeClasses` or clone the repo, and run `pod install` from the Example directory first.
 
 ## Author
 
