@@ -34,13 +34,13 @@ class ViewController: UIViewController, SizeClasses {
         
         let widthLabel = UILabel()
         widthLabel.textColor = .red
-        widthLabel.font = .systemFont(ofSize: 16, weight: UIFontWeightSemibold)
+        widthLabel.font = .systemFont(ofSize: 16, weight: .semibold)
         widthLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(widthLabel)
         
         let heightLabel = UILabel()
         heightLabel.textColor = .red
-        heightLabel.font = .systemFont(ofSize: 16, weight: UIFontWeightSemibold)
+        heightLabel.font = .systemFont(ofSize: 16, weight: .semibold)
         heightLabel.transform = heightLabel.transform.rotated(by: CGFloat(Double.pi / -2))
         heightLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(heightLabel)
@@ -56,7 +56,7 @@ class ViewController: UIViewController, SizeClasses {
         
         let removableConstraintExampleButtonFallbackLeadingConstraint = removableConstraintExampleButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
         // Set lower priority than center x constraint to prevent errors
-        removableConstraintExampleButtonFallbackLeadingConstraint.priority = UILayoutPriorityDefaultHigh
+        removableConstraintExampleButtonFallbackLeadingConstraint.priority = .defaultHigh
         
         removableCenterXConstraint = removableConstraintExampleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         
@@ -143,7 +143,7 @@ class ViewController: UIViewController, SizeClasses {
         traitCollectionDidChange()
     }
     
-    func onRemovableConstraintExampleButtonPressed() {
+    @objc func onRemovableConstraintExampleButtonPressed() {
         if removableCenterXConstraint.isActive {
             remove(constraint: removableCenterXConstraint)
         } else {
