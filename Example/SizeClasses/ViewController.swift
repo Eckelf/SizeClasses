@@ -54,7 +54,7 @@ class ViewController: UIViewController, SizeClasses {
         removableConstraintExampleButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(removableConstraintExampleButton)
         
-        let removableConstraintExampleButtonFallbackLeadingConstraint = removableConstraintExampleButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+        let removableConstraintExampleButtonFallbackLeadingConstraint = removableConstraintExampleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20)
         // Set lower priority than center x constraint to prevent errors
         removableConstraintExampleButtonFallbackLeadingConstraint.priority = .defaultHigh
         
@@ -66,10 +66,10 @@ class ViewController: UIViewController, SizeClasses {
             label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
             widthLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            view.bottomAnchor.constraint(equalTo: widthLabel.bottomAnchor, constant: 4),
+            view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: widthLabel.bottomAnchor, constant: 4),
             
             heightLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            view.trailingAnchor.constraint(equalTo: heightLabel.trailingAnchor, constant: -18),
+            view.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: heightLabel.trailingAnchor, constant: -18),
             
             removableConstraintExampleButtonFallbackLeadingConstraint,
             removableCenterXConstraint,
@@ -78,11 +78,11 @@ class ViewController: UIViewController, SizeClasses {
         
         // In compact widths the background rectangle and the label take on the full width; the label is inset by 20 points to its sides.
         when(.compact, .any, activate: [
-            backgroundRectangle.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: backgroundRectangle.trailingAnchor),
+            backgroundRectangle.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            view.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: backgroundRectangle.trailingAnchor),
             
-            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            view.trailingAnchor.constraint(equalTo: label.trailingAnchor, constant: 20)
+            label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            view.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: label.trailingAnchor, constant: 20)
             ])
         
         // In regular widths the background rectangle doesn't extend past the readable width, the label not past half of the readable width
