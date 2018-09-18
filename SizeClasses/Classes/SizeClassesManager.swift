@@ -35,10 +35,6 @@ public class SizeClassesManager {
         let horizontal: UserInterfaceSizeClassPredicate
         let vertical: UserInterfaceSizeClassPredicate
         
-        var hashValue: Int {
-            return horizontal.hashValue + 10 * vertical.hashValue
-        }
-        
         func matches(horizontalSizeClass: UIUserInterfaceSizeClass, verticalSizeClass: UIUserInterfaceSizeClass) -> Bool {
             return horizontal.matches(sizeClass: horizontalSizeClass) && vertical.matches(sizeClass: verticalSizeClass)
         }
