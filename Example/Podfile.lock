@@ -1,5 +1,5 @@
 PODS:
-  - SizeClasses (0.2.0)
+  - SizeClasses (0.3.0)
 
 DEPENDENCIES:
   - SizeClasses (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SizeClasses: b0f398de0e40bc514ed013d9b89500f08f9793e6
+  SizeClasses: 7314d296addddbe2adb0d98c795a9923b6e4608e
 
 PODFILE CHECKSUM: 03c06dc4643c3b13008f9d5987b6843704bf3cdb
 
