@@ -1,6 +1,0 @@
-framework module SizeClasses {
-  umbrella header "SizeClasses-umbrella.h"
-
-  export *
-  module * { export * }
-}

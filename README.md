@@ -1,6 +1,7 @@
 # SizeClasses
 
 [![CI Status](http://img.shields.io/travis/Eckelf/SizeClasses.svg?style=flat)](https://travis-ci.org/Eckelf/SizeClasses)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/SizeClasses.svg?style=flat)](http://cocoapods.org/pods/SizeClasses)
 [![License](https://img.shields.io/cocoapods/l/SizeClasses.svg?style=flat)](http://cocoapods.org/pods/SizeClasses)
 [![Platform](https://img.shields.io/cocoapods/p/SizeClasses.svg?style=flat)](http://cocoapods.org/pods/SizeClasses)
@@ -88,16 +89,19 @@ Review the code's documentation for more details.
 
 ## Installation
 
+SizeClasses is available through [Carthage](https://github.com/Carthage/Carthage). To install
+it, simply add the following line to your Cartfile:
+
+```ruby
+github "Eckelf/SizeClasses"
+```
+
 SizeClasses is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "SizeClasses"
 ```
-
-## Example
-
-To run the example project, run `pod try SizeClasses` or clone the repo, and run `pod install` from the Example directory first.
 
 ## Author
 
