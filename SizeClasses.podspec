@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.swift_version = '5.0'
 
-  s.source_files = 'SizeClasses/Classes/**/*'
+  s.source_files = 'SizeClasses', 'SizeClasses/**/*.swift'
 end

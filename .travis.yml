@@ -10,5 +10,6 @@ language: objective-c
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/SizeClasses.xcworkspace -scheme SizeClasses-Example -sdk iphonesimulator12.2 ONLY_ACTIVE_ARCH=NO -destination "platform=iOS Simulator,name=iPhone XS" | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -project SizeClasses.xcodeproj -scheme SizeClasses -sdk iphonesimulator12.2 ONLY_ACTIVE_ARCH=NO -destination "platform=iOS Simulator,name=iPhone XS" | xcpretty
+- carthage build --no-skip-current
 - pod lib lint
