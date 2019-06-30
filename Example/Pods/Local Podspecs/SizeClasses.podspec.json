@@ -17,5 +17,7 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "SizeClasses/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "SizeClasses/Classes/**/*",
+  "swift_version": "5.0"
 }

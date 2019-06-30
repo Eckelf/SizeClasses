@@ -44,8 +44,8 @@ public class SizeClassesManager {
         let action: () -> Void
         let identifier: UInt
         
-        var hashValue: Int {
-            return identifier.hashValue
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(identifier)
         }
     }
     
@@ -136,9 +136,9 @@ extension SizeClassesManager {
     func remove(constraint: NSLayoutConstraint) {
         guard let selection = constraintMappings[constraint] else { return }
         
-        if let index = deactivatedConstraints[selection]?.index(of: constraint) {
+        if let index = deactivatedConstraints[selection]?.firstIndex(of: constraint) {
             deactivatedConstraints[selection]?.remove(at: index)
-        } else if let index = activatedConstraints[selection]?.index(of: constraint) {
+        } else if let index = activatedConstraints[selection]?.firstIndex(of: constraint) {
             constraint.isActive = false
             activatedConstraints[selection]?.remove(at: index)
         }
@@ -157,9 +157,9 @@ extension SizeClassesManager {
         
         guard let actionWrapper = actionIdMappings[identifier], let selection = actionMappings[actionWrapper] else { return }
         
-        if let index = inactiveActions[selection]?.index(where: { $0.identifier == identifier }) {
+        if let index = inactiveActions[selection]?.firstIndex(where: { $0.identifier == identifier }) {
             inactiveActions[selection]?.remove(at: index)
-        } else if let index = activeActions[selection]?.index(where: { $0.identifier == identifier }) {
+        } else if let index = activeActions[selection]?.firstIndex(where: { $0.identifier == identifier }) {
             activeActions[selection]?.remove(at: index)
         }
         
