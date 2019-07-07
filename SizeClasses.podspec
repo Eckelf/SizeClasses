@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SizeClasses'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'Use size classes in programmatic layouts effectively.'
 
   s.homepage         = 'https://github.com/Eckelf/SizeClasses'
