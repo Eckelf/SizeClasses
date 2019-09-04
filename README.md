@@ -56,6 +56,13 @@ class MyViewController: UIViewController, SizeClasses {
         traitCollectionDidChange()
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Make sure that traits are evaluated at startup
+        traitCollectionDidChange()
+    }
+
 }
 ```
 
