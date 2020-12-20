@@ -110,6 +110,15 @@ it, simply add the following line to your Podfile:
 pod "SizeClasses"
 ```
 
+SizeClasses is available through Swift Package Manager. To install it, simply add the following line to your Package.swift or the Xcode equivalent:
+
+```swift
+dependencies: [
+  .package(name: "SizeClasses",
+           url: "https://github.com/Eckelf/SizeClasses.git")
+],
+```
+
 ## Author
 
 Vincent Flecke, opensource@eckgen.com
